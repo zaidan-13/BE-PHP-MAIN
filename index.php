@@ -31,7 +31,13 @@
   <div class="container-fluid bg-dark py-2">
     <a class="navbar-brand text-light" href="#"> TahuNgoding
     </a>
+    <ul class="nav">
+      <li class="nav-item">
+          <a href="logout.php" class="nav-link text-white">Logout</a>
+      </li>
+    </ul>
   </div>
+</nav>
 
   <?php
   
