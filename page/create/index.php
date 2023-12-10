@@ -23,7 +23,7 @@
   </div>
 </nav>
 
-  <div class="container d-flex flex-column justify-content-center align-item-start pt-4">
+  <div class="container d-flex flex-column justify-content-center align-items-center pt-4">
         <form class="w-50 shadow p-3 mb-5 rounded" method="POST" action="../create/create.php">
             <div class="mb-3">
               <label  class="form-label">NIM</label>

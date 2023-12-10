@@ -39,7 +39,7 @@ $members = mysqli_fetch_array(mysqli_query($mysqli, "SELECT * FROM member WHERE 
   </div>
 </nav>
 
-  <div class="container d-flex flex-column justify-content-center align-item-start pt-4">
+  <div class="container d-flex flex-column justify-content-center align-items-center pt-4">
         <form class="w-50 shadow p-3 mb-5 rounded" method="POST" action="../update/update.php">
             <input name="id" value="<?= $members['id'] ?>" type="hidden">
             <div class="mb-3">
@@ -68,23 +68,21 @@ $members = mysqli_fetch_array(mysqli_query($mysqli, "SELECT * FROM member WHERE 
             </div>
             <div class="mb-3">
               <label  class="form-label">Divisi_id</label>
-              <select id="divisiId" name="divisiId" class="form-select" value="<?= $members['division_id'] ?>">
-                <option></option>
-                <option>1 - Front End</option>
-                <option>2 - Microsoft Office</option>
-                <option>3 - Backend</option>
+              <select id="divisiId" name="divisiId" class="form-select">
+              <option <?= ($members['division_id'] == 1) ? 'selected' : '' ?>>1 - Front End</option>
+                <option <?= ($members['division_id'] == 2) ? 'selected' : '' ?>>2 - Microsoft Office</option>
+                <option <?= ($members['division_id'] == 3) ? 'selected' : '' ?>>3 - Backend</option>
               </select>
             </div>
             <div class="mb-3">
               <label  class="form-label">Divisi</label>
-              <select id="divisi" name="divisi" class="form-select" value="<?= $members['position'] ?>"> 
-                <option></option>
-                <option>INTI</option>
-                <option>SDM</option>
-                <option>DIKLATBANG</option>
-                <option>INFOKOMAD</option>
-                <option>P2M</option>
-                <option> DANUS dan HUMAS</option>
+              <select id="divisi" name="divisi" class="form-select" ?>"> 
+                <option <?= ($members['position'] == 'INTI') ? 'selected' : '' ?>>INTI</option>
+                <option <?= ($members['position'] == 'SDM') ? 'selected' : '' ?>>SDM</option>
+                <option <?= ($members['position'] == 'DIKLATBANG') ? 'selected' : '' ?>>DIKLATBANG</option>
+                <option <?= ($members['position'] == 'INFOKOMAD') ? 'selected' : '' ?>>INFOKOMAD</option>
+                <option <?= ($members['position'] == 'P2M') ? 'selected' : '' ?>>P2M</option>
+                <option <?= ($members['position'] == 'DANUS dan HUMAS') ? 'selected' : '' ?>>DANUS dan HUMAS</option>
               </select>
             </div>
             
